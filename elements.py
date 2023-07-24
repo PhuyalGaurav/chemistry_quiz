@@ -1,12 +1,3 @@
-import random
-
-
-#Config for your rounds
-
-no_of_rounds = 0
-upto_atomic_number = 0
-
-
 chemical_elements = [
     {"symbol": "H", "name": "Hydrogen", "atomic_number": 1, "mass": 1.008},
     {"symbol": "He", "name": "Helium", "atomic_number": 2, "mass": 4.0026},
@@ -127,17 +118,3 @@ chemical_elements = [
     {"symbol": "Ts", "name": "Tennessine", "atomic_number": 117, "mass": 294},
     {"symbol": "Og", "name": "Oganesson", "atomic_number": 118, "mass": 294},
 ]
-
-
-print(f'\n\nThis Round will be of {no_of_rounds} questions.\n\n')
-win = 0
-
-for i in range(1,no_of_rounds):
-    teplememt = chemical_elements[random.randrange(0,upto_atomic_number)]
-    i = int(input(f'What is the atomic no. of {teplememt["name"]} : '))
-    if i == teplememt["atomic_number"]:
-        print('correct!!')
-        win += 1
-    else:
-        print('incorrect')
-print(f"Your score = {win}/{no_of_rounds}.")
