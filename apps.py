@@ -7,11 +7,16 @@ def quiz(no_of_rounds,upto_atomic_number):
 
     for i in range(1,no_of_rounds):
         teplememt = chemical_elements[random.randrange(0,upto_atomic_number)]
-        i = int(input(f'What is the atomic no. of {teplememt["name"]} : '))
+        try:
+            i = int(input(f'What is the atomic no. of {teplememt["name"]} : '))
+        except ValueError:
+            i = -1
         if i == teplememt["atomic_number"]:
             print('correct!!')
             win += 1
-        else:
+        elif i != -1:
             print('incorrect')
+        else:
+            print('\nEnter a number!!. \n')
     print(f"Your score = {win}/{no_of_rounds}.")
     input()
