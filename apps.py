@@ -12,10 +12,10 @@ def quiz(no_of_rounds,upto_atomic_number):
         except ValueError:
             i = -1
         if i == teplememt["atomic_number"]:
-            print('correct!!')
             win += 1
+            print(f'\ncorrect!!\n\nCurrent Score : {win}\n')
         elif i != -1:
-            print('incorrect')
+            print(f'\nincorrect!!\n\nCurrent Score : {win}\n')
         else:
             print('\nEnter a number!!. \n')
     print(f"Your score = {win}/{no_of_rounds}.")
