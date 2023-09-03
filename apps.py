@@ -1,6 +1,5 @@
 import random
 from elements import chemical_elements
-# Quiz
 def quiz(no_of_rounds,upto_atomic_number):
     print(f'\n\nThis Round will be of {no_of_rounds} questions.\n\n')
     win = 0
